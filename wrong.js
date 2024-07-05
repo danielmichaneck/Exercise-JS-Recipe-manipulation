@@ -44,3 +44,45 @@ console.log("The image source is now: ", image.src);
 const ingredients = document.querySelector(".ingredients-container");
 ingredients.style.backgroundColor = "#f9f9f9";
 console.log("Background color of the ingredients list is now: ", ingredients.style.backgroundColor);
+
+
+/* ##### Remove the text in the bottom ingredients and add the missing list items ##### */
+const bottomIngredients = document.querySelector(".ingredients-list-bottom");
+bottomIngredients.removeChild(bottomIngredients.firstElementChild);
+for (let i = 0; i < 2; i++)
+{
+    bottomIngredients.appendChild(document.createElement("li"));
+}
+bottomIngredients.children[0].innerText = "15st digistivetex";
+bottomIngredients.children[1].innerText = "Lite smör";
+console.log("The bottom ingredients are now: ", bottomIngredients.children[0].innerText, ",", bottomIngredients.children[1].innerText);
+
+
+/* ##### Change the third paste ingredient ##### */
+const pasteIngredients = document.querySelector(".ingredients-list-paste");
+const newIngredient = document.createElement("li");
+newIngredient.innerText = "3tsk vaniljsocker"
+pasteIngredients.replaceChild(newIngredient, pasteIngredients.children[2])
+console.log("The third paste ingredient is now: ", pasteIngredients.children[2].innerText);
+
+
+/* ##### Add the missing paste ingredient ##### */
+const anotherIngredient = document.createElement("li");
+anotherIngredient.innerText = "400g naturell philadelphiaost"
+pasteIngredients.insertAdjacentElement("beforeend", anotherIngredient);
+console.log("The missing ingredient: ", pasteIngredients.children[4].innerText, "has been added.");
+
+
+/* ##### Remove the styling on the instructions header ##### */
+const instructionsHeader = document.querySelector(".instructions-container").firstElementChild;
+instructionsHeader.classList.remove("shadow");
+console.log("Instructions header class list: ", instructionsHeader.classList);
+
+
+/* ##### Change two list elements to the correct ones ##### */
+const instructions = document.querySelector(".instructions-list");
+const firstElementToChange = instructions.children[1];
+const secondElementToChange = instructions.children[8];
+firstElementToChange.innerText = "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
+secondElementToChange.innerText = "Ställ in i frysen över natten.";
+console.log("", firstElementToChange.innerText, secondElementToChange.innerText);
