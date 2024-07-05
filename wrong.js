@@ -1,25 +1,24 @@
 /* ##### Set the logo text to the correct color ##### */
 const logoText = document.querySelector(".logo-text");
-console.log(logoText.style);
 logoText.style.color = "#384241";
-console.log("The color of the logo text is: ", logoText.style.color)
+console.log("The color of the logo text is now: ", logoText.style.color)
 
 
 /* ##### Set the right flex property for the header ##### */
 const header = document.querySelector("header");
 header.style.justifyContent = "flex-start";
-console.log("The flex property justify-content is: ", header.style.justifyContent)
+console.log("The flex property justify-content is now: ", header.style.justifyContent)
 
 
 /* ##### Set the border to the correct color ##### */
 header.style.borderColor = "#d3d3d3";
-console.log("The color of the header border is: ", header.style.borderColor)
+console.log("The color of the header border is now: ", header.style.borderColor)
 
 
 /* ##### Change the recipe name ##### */
 const recipeName = document.querySelector("#recipe-name");
 recipeName.innerText = "Frozen Cheesecake";
-console.log("The name of the recipe is: ", recipeName.innerText)
+console.log("The name of the recipe is now: ", recipeName.innerText)
 
 
 /* ##### Add the clock icon ##### */
@@ -76,7 +75,7 @@ console.log("The missing ingredient: ", pasteIngredients.children[4].innerText, 
 /* ##### Remove the styling on the instructions header ##### */
 const instructionsHeader = document.querySelector(".instructions-container").firstElementChild;
 instructionsHeader.classList.remove("shadow");
-console.log("Instructions header class list: ", instructionsHeader.classList);
+console.log("Instructions header class list (now without the class \"shadow\"): ", instructionsHeader.classList);
 
 
 /* ##### Change two list elements to the correct ones ##### */
@@ -85,4 +84,4 @@ const firstElementToChange = instructions.children[1];
 const secondElementToChange = instructions.children[8];
 firstElementToChange.innerText = "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
 secondElementToChange.innerText = "Ställ in i frysen över natten.";
-console.log("", firstElementToChange.innerText, secondElementToChange.innerText);
+console.log("The second and the ninth instructions have been changed to: ", firstElementToChange.innerText, "and: ", secondElementToChange.innerText);

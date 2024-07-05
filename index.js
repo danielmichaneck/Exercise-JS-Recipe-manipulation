@@ -14,7 +14,7 @@ console.log("The font size of the description is: ", window.getComputedStyle(des
 
 /* ##### Get alt size of the image ##### */
 const image = document.querySelector(".image-container").firstElementChild;
-console.log("The font size of the description is: ", image.alt);
+console.log("The alternative text of the image is: ", image.alt);
 
 
 /* ##### Get the (original) dimensions and url of the image ##### */
@@ -50,4 +50,4 @@ for(let i = 0; i < instructions.children.length; i++)
         text: instructions.children[i].innerText,
     }
 }
-console.log(instructionObjects);
+console.log("Instructions as objects: ", instructionObjects);
