@@ -41,7 +41,6 @@ console.log("Fourth ingredient in the paste: ", pasteIngredients.children[3], " 
 
 /* ##### Create an array of objects containing the instructions ##### */
 const instructions = document.querySelector(".instructions-list");
-console.log(instructions.children);
 const instructionObjects = [];
 for(let i = 0; i < instructions.children.length; i++)
 {
